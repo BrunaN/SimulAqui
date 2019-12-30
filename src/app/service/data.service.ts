@@ -7,7 +7,7 @@ import { Simulation } from '../model/simulation.model';
 
 @Injectable()
 export class DataService {
-    constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient) { }
 
     data: Simulation;
     url = 'http://api.mathjs.org/v4/';
@@ -15,7 +15,7 @@ export class DataService {
     doSimulation(monthy: number, time: number) {
         return this.http.post(this.url,
             {
-                "expr" : `${monthy} * (((1 + 0.00517) ^ ${time} - 1) / 0.00517)`
+                "expr": `${monthy} * (((1 + 0.00517) ^ ${time} - 1) / 0.00517)`
             });
     }
 

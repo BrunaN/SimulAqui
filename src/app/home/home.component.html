@@ -1,8 +1,7 @@
 <div *ngIf="!loading" class="container">
     <h1>Simulador de investimento</h1>
-    <!-- <h2 *ngIf="notCompleted">Informe os dados</h2> -->
     <div class="form">
-        <input [(ngModel)]="name" type="text" placeholder="nome" required>
+        <input [(ngModel)]="name" id="nameInput" type="text" placeholder="nome" required>
     </div>
     <div class="form">
         <input [(ngModel)]="monthly" id="monthlyInput" type="number" placeholder="mensalidade" required>

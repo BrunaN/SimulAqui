@@ -28,10 +28,9 @@ export class HomeComponent implements OnInit {
       this.time = this.time * 12;
     }
 
-    if (this.name != '' && this.monthly != undefined && this.time != undefined ) {
+    if (this.name != '' && this.monthly != undefined && this.time != undefined) {
       this.loading = true;
       this.dataService.doSimulation(this.monthly, this.time).subscribe((response: any) => {
-        console.log(response.result);
         const result = response.result;
         const simulation = new Simulation(this.name, this.monthly, this.time, parseFloat(result));
         this.dataService.addData(simulation);
