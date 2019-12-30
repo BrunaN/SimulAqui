@@ -2,8 +2,8 @@
 Simulação de investimentos
 
 ## Requisitos
-NodeJS
-@angular/cli@6.0.8.
+[NodeJS](https://nodejs.org/)
+[Angular CLI](https://github.com/angular/angular-cli)  
 
 ## Build Projeto
 
