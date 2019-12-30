@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="back">
+        <a routerLink="/home">
+            <img src="../../assets/img/back.png" alt="Voltar">
+            <span>Voltar</span>
+        </a>
+    </div>
+    <div class="content">
+        <h3>
+            Olá {{data.name}}, juntando R${{data.monthly}} todo mês, você terá <span>{{resultReal}}</span> em {{timeReal}}.
+        </h3>
+        <button routerLink="/home">
+            Simular novamente
+        </button>
+    </div>
+</div>

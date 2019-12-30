@@ -1,0 +1,26 @@
+<div *ngIf="!loading" class="container">
+    <h1>Simulador de investimento</h1>
+    <!-- <h2 *ngIf="notCompleted">Informe os dados</h2> -->
+    <div class="form">
+        <input [(ngModel)]="name" type="text" placeholder="nome" required>
+    </div>
+    <div class="form">
+        <input [(ngModel)]="monthly" id="monthlyInput" type="number" placeholder="mensalidade" required>
+    </div>
+    <div class="form time">
+        <input [(ngModel)]="time" id="timeInput" type="number" placeholder="Tempo" required>
+        <select [(ngModel)]="timeOption" required>
+            <option value="1">
+                meses
+            </option>
+            <option value="2">
+                anos
+            </option>
+        </select>
+    </div>
+    <button (click)="post($event)">Simular</button>
+</div>
+<div *ngIf="loading" class="loader">
+    <div class="loading"></div>
+    <span>carregando</span>
+</div>

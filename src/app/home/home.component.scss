@@ -1,0 +1,140 @@
+$primary-color: #18ad47;
+
+.container{
+    h2{
+        margin: 10px 0!important;
+        font-size: 16px;
+        font-weight: normal;
+    }
+    .form{
+        width: 380px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 1px solid #afafaf;
+        transition: color .25s ease-in-out 0s, border-bottom .25s ease-in-out 0s;
+        padding: 8px;
+        margin-top: 10px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .form.time{
+        display: block;
+        width: 100%;
+    }
+    
+    .form:focus-within{
+        border-bottom: 1px solid #4a4b4a;
+        color: #4a4b4a;
+        font-weight: normal;
+    }
+    
+    input:focus{
+        text-align: left;
+    }
+    
+    ::placeholder{
+        text-align: center;
+        font-weight: 700;
+        color: #afafaf;
+    }
+    
+    input[placeholder]:focus{
+        font-weight: normal;
+    }
+    
+    input:focus::-webkit-input-placeholder { font-weight: normal; }
+    input:focus::-moz-placeholder { font-weight: normal; }
+    input:focus::-moz-placeholder { font-weight: normal; }
+    input:focus:-ms-input-placeholder { font-weight: normal; }
+    
+    input{
+        width: 350px;
+    }
+    input, select {
+        border: none;
+        outline: none;
+        text-align: center;
+    }
+    
+    select{
+        color: #afafaf;
+    }
+    
+    #timeInput{
+        width: 60px;
+    }
+    
+    #monthlyInput::-webkit-outer-spin-button,
+    #monthlyInput::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    #monthlyInput[type=number] {
+      -moz-appearance:textfield;
+    }
+    
+    #timeInput::-webkit-outer-spin-button,
+    #timeInput::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    #timeInput[type=number] {
+      -moz-appearance:textfield;
+    }
+}
+
+.loader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .loading{
+        animation-name: rotation;
+        text-align: center;
+        width: 30px;
+        height: 30px;
+        border: 5px solid #ffffff;
+        border-bottom: none;
+        border-radius: 50%;
+        animation-name: go-back;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    span{
+        color: #ffffff;
+        margin-top: 20px;
+        font-size: 16px;
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@media only screen and (max-width: 600px){
+    .container{
+        margin: 0 18px!important;
+        width: calc(100vw - 36px);
+        .form{
+            width: 100%!important;
+            input{
+                width: 100%;
+            }
+        }
+        button{
+            width: 100%;
+        }
+    }
+}
